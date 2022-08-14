@@ -15,7 +15,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { NewEmployeeRoutingModule } from './new-employee/new-employee-routing.module';
 import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
@@ -33,7 +32,6 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
 
     CommonModule,
-    NewEmployeeRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
