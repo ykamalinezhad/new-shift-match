@@ -1,0 +1,19 @@
+<div>
+    <mat-table [dataSource] = employeeDetails>
+        <ng-container matColumnDef = "id">
+            <mat-header-cell *matHeaderCellDef> Employee ID</mat-header-cell>
+            <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef = "name">
+            <mat-header-cell *matHeaderCellDef> Employee Name</mat-header-cell>
+            <mat-cell *matCellDef="let item">{{item.name}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef = "position">
+            <mat-header-cell *matHeaderCellDef> Employee Position</mat-header-cell>
+            <mat-cell *matCellDef="let item">{{item.title}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columns"></mat-row>
+    </mat-table>
+</div>

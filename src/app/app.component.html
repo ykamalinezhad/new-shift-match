@@ -1,0 +1,34 @@
+<img src="/assets/images/logo.PNG">
+<nav class="gridders">
+    <h3>Click on one of these buttons</h3>
+
+    <ng-container class="gridders">
+        <a class="mat-card-buttons" (click)="getListOfEmployees()">
+            <mat-card class="is-alt">
+                <h3>List of employees</h3>
+            </mat-card>
+        </a>
+        <a class="mat-card-buttons" (click)="createEmployee()">
+            <mat-card class="is-alt">
+                <h3>Create a new employee</h3>
+            </mat-card>
+        </a>
+        <a class="mat-card-buttons" (click)="displayRoster()">
+            <mat-card class="is-alt">
+                <h3>Display the roster</h3>
+            </mat-card>
+        </a>
+    </ng-container>
+</nav>
+
+<div *ngIf="displayCreateEmployee">
+  <app-new-employee (backToMainPage) = "backToMainPageFn()"></app-new-employee>
+</div>
+
+<div *ngIf="displayRosterSection">
+  <app-roster></app-roster>
+</div>
+
+<div *ngIf="displayListOfEmployee">
+  <app-employee-list></app-employee-list>
+</div>
